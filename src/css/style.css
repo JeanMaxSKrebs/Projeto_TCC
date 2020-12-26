@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+navbar{
+	background-color: black;
+}
+
+#sideNav a{
+	color: rgba(255,255,255,.5) !important;
+    font-weight: 600;
+	text-transform: uppercase;
+}
+
+footer{
+    bottom:  0px;
+    position: fixed;
+    height: 5vh;
+    width: 100vw;
+}
+
+section.resume-section {
+    border-bottom: 1px solid #dee2e6;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+@media (min-width: 992px) {
+    section.resume-section {
+        min-height: 100vh;
+    }
+    body {
+      padding-top: 0;
+      padding-left: 17rem;
+      
+    }
+    #sideNav {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 17rem;
+        height: 100vh;
+    }
+    #sideNav .navbar-brand {
+        display: flex;
+        margin: auto auto 0;
+        padding: 0.5rem;
+    }
+    #sideNav .navbar-brand .img-profile {
+        max-width: 20rem;
+		border: 0.2rem solid rgba(255, 255, 255, 0.2);
+    }
+    #sideNav .navbar-collapse {
+        display: flex;
+        align-items: flex-start;
+        flex-grow: 0;
+        width: 100%;
+        margin-bottom: auto;
+    }
+    #sideNav .navbar-collapse .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+	}
+	#hiddencadastro{
+		display: none;
+	}
+    #sideNav .navbar-collapse .navbar-nav .nav-item {
+        display: block;
+    }
+    #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+        display: block;
+	}
+}
+
+@media (min-width: 200px) and (max-width:991px){
+	#sideNav .navbar-brand .img-profile {
+        max-width: 16rem;
+		border: 0.2rem solid rgba(255, 255, 255, 0.2);
+	}
+    section.resume-section {
+        min-height: 30vh;
+    }
+    h1{
+        text-align: center;
+    }
+}
