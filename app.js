@@ -4,7 +4,7 @@
 const express = require("express");
 
 const app = express();
-
+app.use(express.static(__dirname + '/src'));
 //conexao sql
 const mysql = require("mysql");
 
@@ -23,22 +23,28 @@ connection.connect(function (err) {
     console.log('connected as id ' + connection.threadId);
 });
 
-
+connection.query('Select * from saloes', function(err, rows, fields){
+    if(!err){
+        console.log('Resultado: ', rows);
+    } else{
+        console.log('Erro ao realizar a consulta');
+    }
+});
 
 app.get("/", function (req, res) {
-    res.sendFile("E:/Projeto TCC/src/index.html");
+    res.sendFile("E:/Projeto_TCC/src/index.html");
 });
 
 app.get("/home", function (req, res) {
-    res.sendFile("E:/Projeto TCC/src/index.html");
+    res.sendFile("E:/Projeto_TCC/src/index.html");
 });
 
 app.get("/sobre", function (req, res) {
-    res.sendFile("E:/Projeto TCC/src/sobre.html");
+    res.sendFile("E:/Projeto_TCC/src/sobre.html");
 });
 
 app.get("/contato", function (req, res) {
-    res.sendFile("E:/Projeto TCC/src/contato.html");
+    res.sendFile("E:/Projeto_TCC/src/contato.html");
 });
 
 app.listen(3000);
