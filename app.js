@@ -31,20 +31,23 @@ connection.query('Select * from saloes', function(err, rows, fields){
     }
 });
 
+const bootstrap = require("./src/boostrap");
+bootstrap(app, router);
+
 app.get("/", function (req, res) {
-    res.sendFile("E:/Projeto_TCC/src/index.html");
+    res.sendFile("C:/Projeto_TCC/src/index.html");
 });
 
 app.get("/home", function (req, res) {
-    res.sendFile("E:/Projeto_TCC/src/index.html");
+    res.sendFile("C:/Projeto_TCC/src/index.html");
 });
 
 app.get("/sobre", function (req, res) {
-    res.sendFile("E:/Projeto_TCC/src/sobre.html");
+    res.sendFile("C:/Projeto_TCC/src/sobre.html");
 });
 
 app.get("/contato", function (req, res) {
-    res.sendFile("E:/Projeto_TCC/src/contato.html");
+    res.sendFile("C:/Projeto_TCC/src/contato.html");
 });
 
 app.listen(3000);
