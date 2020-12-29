@@ -1,6 +1,5 @@
-module.exports = function(app){
-    app.get('/', function(req, res){
-        app.src.controllers.news.index(app, req, res);
-    });
+indexController = require("../controllers/indexController.js");
 
-}
+exports.appRoute = router => {
+    router.get("/saloes", indexController.getSaloesController);
+};
