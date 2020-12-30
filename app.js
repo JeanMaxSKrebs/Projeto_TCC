@@ -16,13 +16,15 @@ app.set('view engine', 'handlebars');
 // })
 
 //Create Express Router
-// const estruturaRouter = require("./src/routes/estrutura");
 const indexRouter = require("./src/routes/index");
+const cadastroClienteRouter = require("./src/routes/cadastroCliente");
+const cadastroSalaoRouter = require("./src/routes/cadastroSalao");
 const homeRouter = require("./src/routes/home");
 const sobreRouter = require("./src/routes/sobre");
 const contatoRouter = require("./src/routes/contato");
-// app.use(estruturaRouter);
 app.use(indexRouter);
+app.use(cadastroClienteRouter);
+app.use(cadastroSalaoRouter);
 app.use(homeRouter);
 app.use(sobreRouter);
 app.use(contatoRouter);
