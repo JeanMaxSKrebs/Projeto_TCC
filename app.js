@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/src'));
 
 const handlebars = require("express-handlebars");
 
-app.engine('handlebars', handlebars({defaultLayout: ''}));
+app.engine('handlebars', handlebars({defaultLayout: "C:/Projeto_TCC/src/views/layouts/estrutura"}));
 app.set('view engine', 'handlebars');
 
 // Rotas
@@ -16,12 +16,12 @@ app.set('view engine', 'handlebars');
 // })
 
 //Create Express Router
-const estruturaRouter = require("./src/routes/estrutura");
+// const estruturaRouter = require("./src/routes/estrutura");
 const indexRouter = require("./src/routes/index");
 const homeRouter = require("./src/routes/home");
 const sobreRouter = require("./src/routes/sobre");
 const contatoRouter = require("./src/routes/contato");
-app.use(estruturaRouter);
+// app.use(estruturaRouter);
 app.use(indexRouter);
 app.use(homeRouter);
 app.use(sobreRouter);
