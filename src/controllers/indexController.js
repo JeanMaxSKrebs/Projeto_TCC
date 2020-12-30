@@ -1,6 +1,6 @@
 module.exports = {
 
   get: (req, res) => {
-    res.status(200).sendFile("E:/Projeto_TCC/src/views/index.html");
+    res.status(200).render("E:/Projeto_TCC/src/views/index.handlebars");
   }
 }

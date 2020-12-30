@@ -1,19 +1,27 @@
-// const hostname = '127.0.0.1';
-// const port = 3000;
-
 const express = require("express");
 
+const PORT = 3000;
 const app = express();
 //carregar css e img
 app.use(express.static(__dirname + '/src'));
 
-const PORT = 3000;
+const handlebars = require("express-handlebars");
+
+app.engine('handlebars', handlebars({defaultLayout: ''}));
+app.set('view engine', 'handlebars');
+
+// Rotas
+// app.get('/index', function(req, res){
+//     res.render('index');
+// })
 
 //Create Express Router
+const estruturaRouter = require("./src/routes/estrutura");
 const indexRouter = require("./src/routes/index");
 const homeRouter = require("./src/routes/home");
 const sobreRouter = require("./src/routes/sobre");
 const contatoRouter = require("./src/routes/contato");
+app.use(estruturaRouter);
 app.use(indexRouter);
 app.use(homeRouter);
 app.use(sobreRouter);
