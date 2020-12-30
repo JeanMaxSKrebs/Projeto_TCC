@@ -10,8 +10,14 @@ app.use(express.static(__dirname + '/src'));
 const PORT = 3000;
 
 //Create Express Router
-const router = require("./src/routes/index");
-app.use(router);
+const indexRouter = require("./src/routes/index");
+const homeRouter = require("./src/routes/home");
+const sobreRouter = require("./src/routes/sobre");
+const contatoRouter = require("./src/routes/contato");
+app.use(indexRouter);
+app.use(homeRouter);
+app.use(sobreRouter);
+app.use(contatoRouter);
 
 //conexao sql
 const mysql = require("mysql");

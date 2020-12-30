@@ -1,7 +1,6 @@
-const index = require("../models/index.js");
+module.exports = {
 
-exports.getIndexController = (req, res, next) => {
-    const saloes = index.getSaloes();
-
-    res.json(saloes);
-  };
+  get: (req, res) => {
+    res.status(200).sendFile("E:/Projeto_TCC/src/views/index.html");
+  }
+}
