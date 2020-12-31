@@ -5,9 +5,9 @@
         </div>
     </div>
     <div class="row content">
-        <div class="col-sm-2 sidenav">
+        <div class="col-sm-3 sidenav">
         </div>
-        <div class="col-sm-8 text-justify">
+        <div class="col-sm-6 text-justify">
             <form action="/cadastro" method="post">
                 <div class="form-group">
                     <label for="nome">Nome Completo</label>
@@ -15,11 +15,24 @@
                 </div>
                 <div class="form-group">
                     <label for="cpf">CPF</label>
-                    <input class="form-control" oninput="cpf(this)" type="text" id="cpf">
+                    <input class="form-control" name="cpf" id="cpf" type="text" onkeyup="cpfCheck(this)" maxlength="14"
+                        onkeydown="javascript: fMasc( this, mCPF );"> <span id="cpfResponse"></span>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input class="form-control" type="password" name="senha" id="senha">
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+                    </div>
+                    <div class="col-8">
+                        <a class="a" href="/cadastro-salao">DESEJO CADASTRAR SALÃO</a>
+                    </div>
                 </div>
             </form>
         </div>
-        <div class="col-sm-2 sidenav">
+        <div class="col-sm-3 sidenav">
         </div>
     </div>
 </div>
