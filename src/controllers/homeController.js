@@ -1,6 +1,11 @@
+const cadastro = require("../models/cadastroSalao");
+
 module.exports = {
 
     get: (req, res) => {
-        res.status(200).render("E:/Projeto_TCC/src/views/index.handlebars");
+        cadastro.findAll().then(function(saloes){
+
+            res.status(200).render("E:/Projeto_TCC/src/views/index.handlebars", {saloes: saloes});
+        })
     }
 }

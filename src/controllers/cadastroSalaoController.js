@@ -6,6 +6,7 @@ module.exports = {
       nome: req.body.nome,
       cidade: req.body.cidade,
       cnpj: req.body.cnpj,
+      imagem: req.body.imagem,
       senha: req.body.senha
     }).then(function(){
       console.log("Sucesso ao realizar a Inserção no Banco de Dados");

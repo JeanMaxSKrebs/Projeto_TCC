@@ -12,7 +12,11 @@ const cadastro = bd.sequelize.define('saloes', {
     },
     senha: {
         type: bd.Sequelize.STRING
+    },
+    imagem: {
+        type: bd.Sequelize.BLOB
     }
+
 
 });
 

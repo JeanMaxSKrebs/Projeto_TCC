@@ -8,7 +8,13 @@ app.use(express.static(__dirname + '/src'));
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser")
 
-app.engine('handlebars', handlebars({ defaultLayout: "E:/Projeto_TCC/src/views/layouts/estrutura" }));
+app.engine('handlebars', handlebars({
+    defaultLayout: "E:/Projeto_TCC/src/views/layouts/estrutura",
+    runtimeOptions: {
+        allowProtoPropertiesByDefault: true,
+        allowProtoMethodsByDefault: true,
+    },
+}))
 app.set('view engine', 'handlebars');
 
 app.use(bodyParser.urlencoded({ extended: false }))
