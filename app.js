@@ -14,11 +14,6 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-//models
-const cadastroSalao = require("./src/models/cadastroSalao");
-// app.use(express.bodyParser());
-
-
 // Rotas
 const indexRouter = require("./src/routes/index");
 const cadastroClienteRouter = require("./src/routes/cadastroCliente");
