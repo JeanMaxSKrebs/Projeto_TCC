@@ -12,22 +12,33 @@
         <div class="col-lg-9 text-justify">
             <div class="saloes row" id="saloes">
                 {{#each saloes}}
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-2 border border-dark" id="{{id}}">
-                    <img src="./img/{{nome}}.jpg">
-                    nome: {{nome}} <br>
-                    cidade: {{cidade}} <br>
-                    cnpj: {{cnpj}} <hr>
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-2 border border-dark">
+                    <div class="row">
+                        <div class="col"><img src="./img/{{nome}}.jpg">
+                        </div>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col">{{nome}}
+                        </div>
+                        <br>
+                        <div class="col">{{cidade}}
+                        </div>
+                        <br>
+
+                    </div>
+                    <div class="row">
+                        <div class="col"> cnpj: {{cnpj}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col"> <a class="btn btn-dark" href="/saloes/{{id}}" id="{{id}}">{{nome}}</a>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <br>
                 </div>
-                <br>
-                {{/each}}
-                  {{#each saloes}}
-                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-2 border border-dark" id="{{id}}">
-                    <img src="./img/{{nome}}.jpg">
-                    nome: {{nome}} <br>
-                    cidade: {{cidade}} <br>
-                    cnpj: {{cnpj}} <hr>
-                </div>
-                <br>
                 {{/each}}
             </div>
         </div>

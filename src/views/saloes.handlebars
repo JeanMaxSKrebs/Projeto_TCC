@@ -1,0 +1,40 @@
+<div class="container-fluid text-center">
+    <div class="row content">
+        {{#each salao}}
+        <div class="col">
+            <h1>{{nome}}</h1>
+            <h6>{{cidade}}</h6>
+        </div>
+
+        {{/each}}
+    </div>
+    <hr>
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+            <div class="ads">
+                <ads></ads>
+            </div>
+            <div class="ads">
+                <ads></ads>
+            </div>
+        </div>
+
+        <div class="col-sm-8 text-justify">
+            {{#each festas}}
+                <div class="row">
+                    <div class="col"><img src="data:image/png;base64,{{imagem}}" id="{{id}}"></div>
+                </div>
+                <br>
+                <hr>
+            {{/each}}
+        </div>
+        <div class="col-sm-2 sidenav">
+            <div class="ads">
+                <ads></ads>
+            </div>
+            <div class="ads">
+                <ads></ads>
+            </div>
+        </div>
+    </div>
+</div>
