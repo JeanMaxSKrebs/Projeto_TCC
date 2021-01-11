@@ -1,7 +1,7 @@
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="col">
-            <h1 class="text-align center">CADASTRO SALÃO</h1>
+            <h1 class="text-align center">LOGIN SALÃO</h1>
         </div>
     </div>
     <br>
@@ -10,18 +10,6 @@
         </div>
         <div class="col-sm-6 text-justify">
             <form action="/cadastro-salao" method="post" name='formPJ' id="formPJ">
-                <div class="form-group">
-                    <label for="nome">Nome Fantasia</label>
-                    <input class="form-control" type="text" name="nome" id="nome">
-                </div>
-                <div class="form-group">
-                    <label for="cidade">Cidade</label>
-                    <input class="form-control" type="text" name="cidade" id="cidade">
-                </div>
-                <div class="form-group">
-                    <label for="imagem">Inserir Logo</label>
-                    <input class="form-control-file" name="imagem" id="imagem" type="file" />
-                </div>
                 <div class="form-group">
                     <label for="cnpj">CNPJ</label>
                     <input class="form-control" name="cnpj" type="text" id="cnpj" onBlur="ValidarCNPJ(formPJ.cnpj);"
@@ -34,13 +22,13 @@
                 </div>
                 <div class="row">
                     <div class="col-2">
-                        <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+                        <button type="submit" class="btn btn-outline-primary">Entrar</button>
                     </div>
                     <div class="col">
-                        <a class="a" href="/cadastro-cliente">DESEJO CADASTRAR CLIENTE</a>
+                        <a class="a" href="/login-cliente">DESEJO LOGAR CLIENTE</a>
                     </div>
                     <div class="col">
-                        <a class="a" href="/login-salao">JÁ ESTOU CADASTRADO</a>
+                        <a class="a" href="/cadastro-salao">DESEJO CADASTRAR SALÃO</a>
                     </div>
                 </div>
             </form>

@@ -21,12 +21,16 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // Rotas
+const loginClienteRouter = require("./src/routes/loginCliente");
+const loginSalaoRouter = require("./src/routes/loginSalao");
 const cadastroClienteRouter = require("./src/routes/cadastroCliente");
 const saloesRouter = require("./src/routes/saloes")
 const cadastroSalaoRouter = require("./src/routes/cadastroSalao");
 const homeRouter = require("./src/routes/home");
 const sobreRouter = require("./src/routes/sobre");
 const contatoRouter = require("./src/routes/contato");
+app.use(loginClienteRouter);
+app.use(loginSalaoRouter);
 app.use(saloesRouter);
 app.use(cadastroClienteRouter);
 app.use(cadastroSalaoRouter);
