@@ -2,6 +2,9 @@ const express = require("express");
 
 const PORT = 3000;
 const app = express();
+
+var bcrypt = require("bcryptjs");
+
 //carregar css e img
 app.use(express.static(__dirname + '/src'));
 
