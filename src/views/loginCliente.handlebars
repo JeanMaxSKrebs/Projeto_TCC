@@ -11,9 +11,9 @@
         <div class="col-sm-6 text-justify">
             <form action="/login-cliente" method="post" name='formPJ' id="formPJ">
                 <div class="form-group">
-                    <label for="cnpj">CNPJ</label>
-                    <input class="form-control" name="cnpj" type="text" id="cnpj" onBlur="ValidarCNPJ(formPJ.cnpj);"
-                        onKeyPress="return txtBoxFormat(this.id, '99.999.999/9999-99',event);" maxlength="18" />
+                    <label for="cpf">CPF</label>
+                    <input class="form-control" name="cpf" id="cpf" type="text" onkeyup="cpfCheck(this)" maxlength="14"
+                        onkeydown="javascript: fMasc( this, mCPF );"> <span id="cpfResponse"></span>
                 </div>
 
                 <div class="form-group">

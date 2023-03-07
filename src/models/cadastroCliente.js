@@ -1,5 +1,5 @@
 const bd = require("./bd");
-var bcrypt = require("bcryptjs");
+var bcrypt = require("bcrypt");
 
 const cadastro = bd.sequelize.define('clientes', {
     nome: {

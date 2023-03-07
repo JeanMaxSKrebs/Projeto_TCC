@@ -3,15 +3,15 @@ const express = require("express");
 const PORT = 3000;
 const app = express();
 
-var bcrypt = require("bcryptjs");
+var bcrypt = require("bcrypt");
 
 //carregar css e img
 app.use(express.static(__dirname + '/src'));
 
-const handlebars = require("express-handlebars");
+const { engine } = require ("express-handlebars");
 const bodyParser = require("body-parser")
 
-app.engine('handlebars', handlebars({
+app.engine('handlebars', engine({
     defaultLayout: "E:/Projeto_TCC/src/views/layouts/estrutura",
     runtimeOptions: {
         allowProtoPropertiesByDefault: true,
