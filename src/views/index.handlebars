@@ -10,17 +10,20 @@
         </div>
 
         <div class="col-lg-9 text-justify">
+
             <div class="saloes row" id="saloes">
                 {{#each saloes}}
-                <div>
-                    <div class="row">
-                        <div class="col-6">
-                            <div>{{nome}} - {{cidade}}</div>
-                            <div>Crie uma descrição aqui</div>
-                            <br>
-                            <div><a class="btn btn-dark btn-block" href="/saloes/{{id}}" id="{{id}}">Entrar</a></div>
+                <div class="card col-4">
+                    <div class="card-img-top"><img src="../assets/img/{{nome}}.jpg" style="height: 200px; width: auto;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{nome}}</h5>
+
+
+                        <p class="card-text">{{cidade}}</p>
+                        <p class="card-text">{{descricao}}</p>
+                        <div>
+                            <a class="btn btn-dark btn-block" href="/saloes/{{id}}" id="{{id}}">Entrar</a>
                         </div>
-                        <div class="col-6"><img src="./img/{{nome}}.jpg"></div>
                     </div>
                 </div>
                 {{/each}}
